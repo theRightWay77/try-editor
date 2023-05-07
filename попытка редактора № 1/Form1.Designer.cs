@@ -33,7 +33,7 @@ namespace попытка_редактора___1
             this.label1 = new System.Windows.Forms.Label();
             this.Deserialize = new System.Windows.Forms.Button();
             this.Serialize = new System.Windows.Forms.Button();
-            this.Information = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
             this.Example = new System.Windows.Forms.TextBox();
             this.Translation = new System.Windows.Forms.TextBox();
             this.Add = new System.Windows.Forms.Button();
@@ -41,7 +41,7 @@ namespace попытка_редактора___1
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TheWord = new System.Windows.Forms.TextBox();
-            this.Information.SuspendLayout();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // listViewWords
@@ -53,6 +53,7 @@ namespace попытка_редактора___1
             this.listViewWords.TabIndex = 0;
             this.listViewWords.UseCompatibleStateImageBehavior = false;
             this.listViewWords.View = System.Windows.Forms.View.List;
+            this.listViewWords.SelectedIndexChanged += new System.EventHandler(this.listViewWords_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -87,35 +88,34 @@ namespace попытка_редактора___1
             this.Serialize.UseVisualStyleBackColor = false;
             this.Serialize.Click += new System.EventHandler(this.Serialize_Click);
             // 
-            // Information
+            // panel
             // 
-            this.Information.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Information.Controls.Add(this.Example);
-            this.Information.Controls.Add(this.Translation);
-            this.Information.Controls.Add(this.Add);
-            this.Information.Controls.Add(this.label5);
-            this.Information.Controls.Add(this.label4);
-            this.Information.Controls.Add(this.label3);
-            this.Information.Controls.Add(this.TheWord);
-            this.Information.Location = new System.Drawing.Point(348, 42);
-            this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(344, 308);
-            this.Information.TabIndex = 8;
+            this.panel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel.Controls.Add(this.Example);
+            this.panel.Controls.Add(this.Translation);
+            this.panel.Controls.Add(this.Add);
+            this.panel.Controls.Add(this.label5);
+            this.panel.Controls.Add(this.label4);
+            this.panel.Controls.Add(this.label3);
+            this.panel.Controls.Add(this.TheWord);
+            this.panel.Location = new System.Drawing.Point(348, 42);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(344, 308);
+            this.panel.TabIndex = 8;
             // 
             // Example
             // 
             this.Example.Location = new System.Drawing.Point(23, 187);
-            this.Example.Multiline = true;
             this.Example.Name = "Example";
-            this.Example.Size = new System.Drawing.Size(268, 26);
+            this.Example.Size = new System.Drawing.Size(268, 22);
             this.Example.TabIndex = 9;
             // 
             // Translation
             // 
             this.Translation.Location = new System.Drawing.Point(23, 113);
-            this.Translation.Multiline = true;
             this.Translation.Name = "Translation";
-            this.Translation.Size = new System.Drawing.Size(268, 26);
+            this.Translation.Size = new System.Drawing.Size(268, 22);
             this.Translation.TabIndex = 9;
             // 
             // Add
@@ -160,9 +160,8 @@ namespace попытка_редактора___1
             // TheWord
             // 
             this.TheWord.Location = new System.Drawing.Point(23, 51);
-            this.TheWord.Multiline = true;
             this.TheWord.Name = "TheWord";
-            this.TheWord.Size = new System.Drawing.Size(268, 26);
+            this.TheWord.Size = new System.Drawing.Size(268, 22);
             this.TheWord.TabIndex = 0;
             // 
             // Form1
@@ -170,15 +169,15 @@ namespace попытка_редактора___1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Information);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.Serialize);
             this.Controls.Add(this.Deserialize);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listViewWords);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Information.ResumeLayout(false);
-            this.Information.PerformLayout();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,7 +189,7 @@ namespace попытка_редактора___1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Deserialize;
         private System.Windows.Forms.Button Serialize;
-        private System.Windows.Forms.Panel Information;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

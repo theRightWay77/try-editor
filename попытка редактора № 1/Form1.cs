@@ -93,7 +93,9 @@ namespace попытка_редактора___1
             ClearInput();
         }
 
-        private void Words_SelectedIndexChanged(object sender, EventArgs e)
+       
+
+        private void listViewWords_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listViewWords.SelectedItems.Count == 1)
             {
@@ -102,13 +104,13 @@ namespace попытка_редактора___1
                 if (TheWord != null)
                 {
                     TheWord.Text = word.TheWord;
-                   // TheWord.Text = "hello";
+                    // TheWord.Text = "hello";
                     Translation.Text = word.Translation;
-                    Example.Text = word.Example;                
+                    Example.Text = word.Example;
                 }
             }
             else if (listViewWords.SelectedItems.Count == 0)
-            {           
+            {
                 ClearInput();
             }
         }
